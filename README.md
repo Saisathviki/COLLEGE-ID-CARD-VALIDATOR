@@ -52,20 +52,20 @@ scikit-learn
 
 - Docker for deployment (Section 14)
 
-## Installation
+# Installation
 
-# 1. Clone the repository:
+## 1. Clone the repository:
  ```bash
  git clone <your-repo-url>
  cd AI-ID-Card-Validator  
  ```
 
-# 2. Install dependencies:
+## 2. Install dependencies:
 ```bash
   pip install -r requirements.txt
  ```
 
-# 3.Prepare dataset and model:
+## 3.Prepare dataset and model:
 Ensure photos/, templates/, and approved_colleges.json are present.
 Verify manual dataset (161 IDs already created):
 
@@ -78,12 +78,12 @@ Train the model:
 ```bash
 python images_classifier.py
 ```
-# 4.Build and run Docker container9OFFLINE):
+## 4.Build and run Docker container9OFFLINE):
 ```bash
 docker build -t college-id-validator .
 docker run -p 8000:8000 college-id-validator
 ```
-## Usage
+# Usage
 ```bash
 Access http://localhost:8000/docs in a browser to use the Swagger UI (Section 9).
 ```
