@@ -2,11 +2,11 @@
 
 An offline AI-based microservice to detect fake, altered, or non-genuine student ID card uploads, developed as an internship project at Turtil Company.
 
-## Overview
+# Overview
 
 This project implements a FastAPI-based microservice that analyzes base64-encoded student ID card images to determine authenticity. It uses a ResNet-like classifier for image-level manipulation detection, validates text data (e.g., college names from a 354-college list) against `config.json`, and returns a confidence score and decision. Fully offline and Dockerized, it meets all requirements from the project specification (Section 2) with a best validation accuracy of 90.91% and 100% test accuracy on 45 cases.
 
-## Features
+# Features
 
 - Accepts base64-encoded ID card images via POST `/validate-id` (Section 3A).
 - Detects manipulation, forgery, or template issues using image and text signals (Section 4A).
@@ -14,17 +14,17 @@ This project implements a FastAPI-based microservice that analyzes base64-encode
 - Operates offline with no external APIs (Section 13).
 - Includes a dataset of 161 simulated IDs across 354 colleges.
 
-## Project Showcase
+# Project Showcase
 
 - **Demo Video**: [Link to a short screencast showing API usage via `/docs` and sample predictions] 
 - **Architecture Diagram**: Imagine a flowchart:  
   - Input (base64 image) → Image Classifier → OCR Validation → Decision Rules → Output (JSON).  
 - **Highlight**: Achieved 100% test accuracy on 45 manual test cases, exceeding the required test coverage (Section 10).
 
-## Requirements
+# Requirements
 - Python 3.8+
 - Libraries (listed in `requirements.txt`):
-# Core ML and ONNX dependencies
+## Core ML and ONNX dependencies
 numpy>=1.26.0
 onnx>=1.15.0
 onnxruntime>=1.16.3
@@ -32,16 +32,16 @@ Pillow>=10.0.0
 opencv-python>=4.8.0
 pytesseract>=0.3.13
 
-# FastAPI and web dependencies
+## FastAPI and web dependencies
 fastapi>=0.115.0
 uvicorn>=0.27.0
 python-multipart>=0.0.6
 httpx>=0.28.0  # For testing
 
-# Testing
+## Testing
 pytest>=8.3.0
 
-# Utilities
+## Utilities
 python-jose>=3.3.0  # For JWT handling
 python-dotenv>=1.0.0  # For environment variables
 pydantic>=2.0.0  # For data validation
@@ -52,20 +52,20 @@ scikit-learn
 
 - Docker for deployment (Section 14)
 
-## Installation
+# Installation
 
-# 1. Clone the repository:
+## 1. Clone the repository:
  ```bash
  git clone <your-repo-url>
  cd AI-ID-Card-Validator  
  ```
 
-# 2. Install dependencies:
+## 2. Install dependencies:
 ```bash
   pip install -r requirements.txt
  ```
 
-# 3.Prepare dataset and model:
+## 3.Prepare dataset and model:
 Ensure photos/, templates/, and approved_colleges.json are present.
 Verify manual dataset (161 IDs already created):
 
@@ -78,12 +78,25 @@ Train the model:
 ```bash
 python images_classifier.py
 ```
-# 4.Build and run Docker container9OFFLINE):
+## 4.Build and run Docker container9OFFLINE):
 ```bash
 docker build -t college-id-validator .
 docker run -p 8000:8000 college-id-validator
 ```
-## Usage
+# Usage
+```bash
+Access http://localhost:8000/docs in a browser to use the Swagger UI (Section 9).
+```
+📸 Swagger UI Screenshot  
+When the Docker container runs successfully, you can access the API at:
+
+[http://localhost:8000/docs](http://localhost:8000/docs)
+
+This is what the interface looks like:
+
+![Swagger UI Screenshot](assets/swagger_ui.png)
+
+
 # API Endpoints (Section 8)
 POST /validate-id
 Payload (Section 3A):
