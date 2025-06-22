@@ -20,10 +20,10 @@ env/
 # Docker-related leftovers
 *.pid
 *.sock
-
+<!-- 
 # Test output
 tests/__pycache__/
-*.pytest_cache/
+*.pytest_cache/ -->
 
 # System files
 .DS_Store

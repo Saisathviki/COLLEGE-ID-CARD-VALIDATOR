@@ -49,9 +49,18 @@ dependencies_linux/
 *.pid
 *.sock
 
-# Test files and cache
-tests/__pycache__/
-tests/*.log
+# # Test files and cache
+# tests/__pycache__/
+# tests/*.log
+# !tests/sample_inputs/
+# !tests/sample_inputs/**
+
+# # Ignore all .log files except sampleinput.log
+# tests/*.log
+# !tests/sample_inputs/
+# !tests/sample_inputs/**
+
+
 
 # VSCode settings (optional)
 .vscode/
