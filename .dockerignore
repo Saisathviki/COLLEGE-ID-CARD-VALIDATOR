@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Git repository and metadata
+.git
+.gitignore
+
+# Virtual environments
+venv/
+env/
+
+# Logs
+*.log
+
+# IDE/editor config files
+.vscode/
+*.swp
+
+# Docker-related leftovers
+*.pid
+*.sock
+
+# Test output
+tests/__pycache__/
+*.pytest_cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Large or unnecessary folders
+dependencies_linux/

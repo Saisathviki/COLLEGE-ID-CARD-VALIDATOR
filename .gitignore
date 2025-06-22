@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment folders
+venv*/
+env*/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model files
+model/*.onnx
+
+# Log files
+*.log
+
+# Temporary files and folders
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# OS-generated files
+.DS_Store
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# FastAPI/Uvicorn logs
+*.sqlite3
+*.db
+
+# Dependency wheels and cache
+dependencies_linux/
+*.whl
+pip-wheel-metadata/
+__pypackages__/
+dependencies/
+dependencies_linux/
+*.whl
+*.onnx
+
+# Docker files and volumes
+*.pid
+*.sock
+
+# Test files and cache
+tests/__pycache__/
+tests/*.log
+
+# VSCode settings (optional)
+.vscode/
+
+# Environment variables or secrets
+.env
+.env.*
+
+# PyInstaller
+dist/
+build/
+*.spec
