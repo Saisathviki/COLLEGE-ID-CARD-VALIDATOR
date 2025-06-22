@@ -78,7 +78,7 @@ Train the model:
 ```bash
 python images_classifier.py
 ```
-# 4.Build and run Docker container:
+# 4.Build and run Docker container9OFFLINE):
 ```bash
 docker build -t college-id-validator .
 docker run -p 8000:8000 college-id-validator
