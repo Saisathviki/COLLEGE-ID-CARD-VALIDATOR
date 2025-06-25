@@ -36,7 +36,7 @@ Desktop.ini
 *.db
 
 # Dependency wheels and cache
-dependencies_linux/
+#dependencies_linux/
 *.whl
 pip-wheel-metadata/
 __pypackages__/
